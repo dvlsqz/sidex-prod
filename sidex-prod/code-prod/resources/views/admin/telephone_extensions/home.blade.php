@@ -52,7 +52,7 @@
                             {!! Form::text('search', null, ['class' => 'form-control', 'placeholder' => 'Ingrese su busqueda', 'required']) !!}
                         </div>
                         <div class="col-md-4">
-                            {!! Form::select('filter',['0'=>'Numero de Extension', '1'=>'Descripcion de Extension'], 0, ['class' => 'form-select']) !!}
+                            {!! Form::select('filter',['0'=>'Numero de Extension', '1'=>'Descripcion de Extension', '2'=>'Direccion IP'], 0, ['class' => 'form-select']) !!}
                         </div>
                         <div class="col-md-2">
                             {!! Form::select('status',['0'=>'No Pública', '1'=>'Pública'], 0, ['class' => 'form-select']) !!}

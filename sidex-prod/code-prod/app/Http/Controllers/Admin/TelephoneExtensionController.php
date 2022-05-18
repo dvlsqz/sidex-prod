@@ -211,11 +211,15 @@ class TelephoneExtensionController extends Controller
                 case '1':
                     $telephone_extensions = TelephoneExtension::with(['ser'])->where('description','LIKE', '%'.$request->input('search').'%')->orderBy('number','Asc')->get();
                 break;
+
+                case '2':
+                    $telephone_extensions = TelephoneExtension::with(['ser'])->where('ip','LIKE', '%'.$request->input('search').'%')->orderBy('number','Asc')->get();
+                break;
             endswitch;
 
-        $data = ['telephone_extensions' => $telephone_extensions];
+            $data = ['telephone_extensions' => $telephone_extensions];
 
-        return view('admin.telephone_extensions.search', $data);
+            return view('admin.telephone_extensions.search', $data);
         
         endif;
     }
